@@ -54,11 +54,8 @@ class BreadthFirstSearch:
         frontier = QueueFrontier()
         frontier.add(node)
 
-        while True:
+        while not frontier.is_empty()::
 
-            #  Fail if the frontier is empty
-            if frontier.is_empty():
-                return NoSolution(reached)
 
             # Remove a node from the frontier
             node = frontier.remove()
@@ -91,4 +88,4 @@ class BreadthFirstSearch:
 
                         # Add the new node to the frontier
                         frontier.add(new_node)
-
+        return NoSolution(reached)
