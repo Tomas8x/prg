@@ -65,9 +65,9 @@ class BreadthFirstSearch:
 
             # Go right
             successors = grid.get_neighbours(node.state)
-            a=['right','up','left','down']
-            for i in a:
-                if i in successors:
+            
+            
+            for i in successors:
 
                     # Get the successor
                     new_state = successors[i]
